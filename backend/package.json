@@ -1,19 +1,21 @@
 {
-  "name": "backend",
+  "name": "@home-porn/backend",
   "version": "1.0.0",
   "description": "Ahoooooj",
-  "main": "index.js",
+  "main": "dist/entrypoint.js",
   "scripts": {
     "tsc": "tsc",
     "dev": "ts-node-dev src/entrypoint.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "milansuk@email.cz",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "kafkajs": "^1.15.0"
   },
   "devDependencies": {
+    "@home-porn/kafka": "file:../kafka",
     "@types/express": "^4.17.9",
     "@types/node": "^14.14.10",
     "ts-node-dev": "^1.0.0",

@@ -1,0 +1,20 @@
+{
+  "name": "@home-porn/commander",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "milansuk@email.cz",
+  "license": "ISC",
+  "dependencies": {
+    "@home-porn/kafka": "file:../kafka",
+    "@home-porn/models": "file:../models",
+    "typescript": "^4.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0"
+  }
+}

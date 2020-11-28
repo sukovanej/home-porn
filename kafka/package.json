@@ -1,0 +1,23 @@
+{
+  "name": "@home-porn/kafka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "types": "dist",
+  "files": ["dist"],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@home-porn/models": "file:../models",
+    "kafkajs": "^1.15.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.2",
+    "@types/kafkajs": "^1.9.0",
+    "@types/node": "^14.14.10"
+  }
+}
