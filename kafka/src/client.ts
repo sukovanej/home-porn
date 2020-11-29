@@ -50,7 +50,6 @@ export class KafkaClient {
     await consumer.run({
       eachMessage: async ({ topic, partition, message }) => {
         await callback(JSON.parse(message.value!.toString()));
-        consumer.disconnect();
       },
     });
   }

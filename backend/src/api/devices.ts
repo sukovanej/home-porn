@@ -8,7 +8,7 @@ export class DevicesController {
   patchState(req: Request, res: Response) {
     const { deviceId } = req.params;
     const { state } = req.body;
-    this.kafkaClient.produceWriteState({ deviceId, state });
+    this.kafkaClient.produceWriteState({ id: deviceId, state });
     res.json({ status: "ok" });
   }
 }

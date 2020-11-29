@@ -3,9 +3,9 @@
     "target": "es5",
     "module": "commonjs",
     "outDir": "./dist",
-    "strict": true,  
+    "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,  
+    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   }
 }
