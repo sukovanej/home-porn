@@ -3,7 +3,7 @@ import { DeviceType, DeviceState, EspId } from "@home-porn/models";
 export class Commander {
   constructor() {}
 
-  async readState(deviceType: DeviceType): DeviceState {
+  async readState(deviceType: DeviceType): Promise<DeviceState> {
     // TODO: ESPHome REST API get
     const state = true;
     return state;

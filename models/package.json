@@ -2,15 +2,20 @@
   "name": "@home-porn/models",
   "version": "1.0.0",
   "description": "",
-  "types": "dist",
   "scripts": {
     "tsc": "tsc"
   },
-  "files": ["dist"],
+  "types": "dist",
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "milansuk@email.cz",
   "license": "ISC",
   "dependencies": {
     "typescript": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.10"
   }
 }

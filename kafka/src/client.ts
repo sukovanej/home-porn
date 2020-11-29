@@ -16,19 +16,19 @@ export class KafkaClient {
   }
 
   async produceWriteState(deviceIdWithState: DeviceIdWithState) {
-    this.produceMessage("write_state", JSON.stringify(deviceIdWithState));
+    await this.produceMessage("write_state", JSON.stringify(deviceIdWithState));
   }
 
   async produceReadState(deviceIdWithState: DeviceIdWithState) {
-    this.produceMessage("read_state", JSON.stringify(deviceIdWithState));
+    await this.produceMessage("read_state", JSON.stringify(deviceIdWithState));
   }
 
   async consumeReadState(callback: ConsumerCallback) {
-    this.consumeTopic("read_state", callback);
+    await this.consumeTopic("read_state", callback);
   }
 
   async consumeWriteState(callback: ConsumerCallback) {
-    this.consumeTopic("write_state", callback);
+    await this.consumeTopic("write_state", callback);
   }
 
   private async produceMessage(topic: string, message: string) {
@@ -49,7 +49,7 @@ export class KafkaClient {
 
     await consumer.run({
       eachMessage: async ({ topic, partition, message }) => {
-        callback(JSON.parse(message.value!.toString()));
+        await callback(JSON.parse(message.value!.toString()));
         consumer.disconnect();
       },
     });

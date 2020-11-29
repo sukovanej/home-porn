@@ -11,13 +11,13 @@ export class Client {
     private repository: Repository
   ) {}
 
-  async readState(id: DeviceId) {
+  async readState(id: DeviceId): Promise<void> {
     const deviceType = this.repository.getDeviceTypeById(id);
     const state = this.commander.readState(deviceType);
     await this.kafkaClient.produceReadState({ id, state });
   }
 
-  async writeState(id: DeviceId, deviceState: DeviceState) {
+  async writeState(id: DeviceId, deviceState: DeviceState): Promise<void> {
     const espId = this.repository.getEspIdByDeviceId(id);
     await this.commander.writeState(espId, deviceState);
   }
